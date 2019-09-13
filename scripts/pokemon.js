@@ -1,5 +1,5 @@
 var pokemonList = { 
-    "index": 0,
+    "index": -1,
     "pokemon": [ 
         { "id": 1,
             "name": "Bulbasaur",
@@ -25,11 +25,11 @@ var pokemonList = {
 };
 
 function displayPokemon() {
+    incrementIndex();
     document.getElementById("nameText").innerHTML = pokemonList.pokemon[pokemonList.index].name;
     document.getElementById("typeText").innerHTML = pokemonList.pokemon[pokemonList.index].type;
     document.getElementById("heightText").innerHTML = pokemonList.pokemon[pokemonList.index].height;
     document.getElementById("weightText").innerHTML = pokemonList.pokemon[pokemonList.index].weight;
-    incrementIndex();
 }
 
 function setVisibility() {
@@ -41,33 +41,12 @@ function setVisibility() {
 }
 
 function showRoster() {
-
     document.getElementById("creatureForm").style.display = "inline";
-
-    // document.getElementById("nameLabel").style.display = "inline";
-    // document.getElementById("nameText").style.display = "inline";
-    // document.getElementById("typeLabel").style.display = "inline";
-    // document.getElementById("typeText").style.display = "inline";
-    // document.getElementById("heightLabel").style.display = "inline";
-    // document.getElementById("heightText").style.display = "inline";
-    // document.getElementById("weightLabel").style.display = "inline";
-    // document.getElementById("weightText").style.display = "inline";
-    // document.getElementById("nextPokemonButton").style.display = "inline";
-
     document.getElementById("viewRosterButton").innerHTML = "Hide Roster";
 }
 
 function hideRoster() {
-    document.getElementById("nameLabel").style.display = "none";
-    document.getElementById("nameText").style.display = "none";
-    document.getElementById("typeLabel").style.display = "none";
-    document.getElementById("typeText").style.display = "none";
-    document.getElementById("heightLabel").style.display = "none";
-    document.getElementById("heightText").style.display = "none";
-    document.getElementById("weightLabel").style.display = "none";
-    document.getElementById("weightText").style.display = "none";
-    document.getElementById("nextPokemonButton").style.display = "none";
-
+    document.getElementById("creatureForm").style.display = "none";
     document.getElementById("viewRosterButton").innerHTML = "Show Roster";
 }
 
