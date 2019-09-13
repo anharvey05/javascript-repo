@@ -25,7 +25,6 @@ var pokemonList = {
 };
 
 function displayPokemon() {
-    setVisibility();
     document.getElementById("nameText").innerHTML = pokemonList.pokemon[pokemonList.index].name;
     document.getElementById("typeText").innerHTML = pokemonList.pokemon[pokemonList.index].type;
     document.getElementById("heightText").innerHTML = pokemonList.pokemon[pokemonList.index].height;
@@ -34,18 +33,39 @@ function displayPokemon() {
 }
 
 function setVisibility() {
-    if (document.getElementById("nameLabel").style.visibility == "hidden") {
-        document.getElementById("nameLabel").style.visibility = "visible";
+    if (document.getElementById("nextPokemonButton").style.display == "none") {
+        showRoster();
+    } else {
+        hideRoster();
     }
-    if (document.getElementById("typeLabel").style.visibility == "hidden") {
-        document.getElementById("typeLabel").style.visibility = "visible";
-    }
-    if (document.getElementById("heightLabel").style.visibility == "hidden") {
-        document.getElementById("heightLabel").style.visibility = "visible";
-    }
-    if (document.getElementById("weightLabel").style.visibility == "hidden") {
-        document.getElementById("weightLabel").style.visibility = "visible";
-    }
+}
+
+function showRoster() {
+    document.getElementById("nameLabel").style.display = "inline";
+    document.getElementById("nameText").style.display = "inline";
+    document.getElementById("typeLabel").style.display = "inline";
+    document.getElementById("typeText").style.display = "inline";
+    document.getElementById("heightLabel").style.display = "inline";
+    document.getElementById("heightText").style.display = "inline";
+    document.getElementById("weightLabel").style.display = "inline";
+    document.getElementById("weightText").style.display = "inline";
+    document.getElementById("nextPokemonButton").style.display = "inline";
+
+    document.getElementById("viewRosterButton").innerHTML = "Hide Roster";
+}
+
+function hideRoster() {
+    document.getElementById("nameLabel").style.display = "none";
+    document.getElementById("nameText").style.display = "none";
+    document.getElementById("typeLabel").style.display = "none";
+    document.getElementById("typeText").style.display = "none";
+    document.getElementById("heightLabel").style.display = "none";
+    document.getElementById("heightText").style.display = "none";
+    document.getElementById("weightLabel").style.display = "none";
+    document.getElementById("weightText").style.display = "none";
+    document.getElementById("nextPokemonButton").style.display = "none";
+
+    document.getElementById("viewRosterButton").innerHTML = "Show Roster";
 }
 
 function incrementIndex() {

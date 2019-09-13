@@ -1,20 +1,26 @@
 <html>
     <head>
         <title>Pokemon Page</title>
+        <link rel="stylesheet" type="text/css" href="styles/home.css">
     </head>
     <body>
         <h2>Pika pika!</h2><br><br>
-        <button id="nextPokemon" onclick="displayPokemon()">Click for Next</button><br><br>
-        <label id="nameLabel" style="visibility:hidden">Name: </label>
-        <label id="nameText"></label><br>
-        <label id="typeLabel" style="visibility:hidden">Type: </label>
-        <label id="typeText"></label><br>
-        <label id="heightLabel" style="visibility:hidden">Height: </label>
-        <label id="heightText"></label><br>
-        <label id="weightLabel" style="visibility:hidden">Weight: </label>
-        <label id="weightText"></label><br>
+        <button id="viewRosterButton" onclick="setVisibility()">View Roster</button><br><br>
+        <button id="nextPokemonButton" onclick="displayPokemon()" style="display:none">Click for Next</button><br><br>
 
-        <br>
+        <p id="nameLabel" style="display:none">Name: 
+            <p id="nameText" style="display:none"></p>
+        </p> 
+        <p id="typeLabel" style="display:none">Type: 
+            <p id="typeText" style="display:none"></p>
+        </p>        
+        <p id="heightLabel" style="display:none">Height: 
+            <p id="heightText" style="display:none"></p>
+        </p>   
+        <p id="weightLabel" style="display:none">Weight: 
+            <p id="weightText" style="display:none"></p>
+        </p>
+
         <br>
         <a href="home.html">Back to Home</a>
     </body>
