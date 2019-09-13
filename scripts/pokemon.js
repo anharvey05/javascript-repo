@@ -24,8 +24,13 @@ var pokemonList = {
     ]
 };
 
-function displayPokemon() {
-    incrementIndex();
+function displayPokemon(direction) {
+    if (direction == "down") {
+        decrementIndex();
+    } else {
+        incrementIndex();
+    }
+    
     document.getElementById("nameText").innerHTML = pokemonList.pokemon[pokemonList.index].name;
     document.getElementById("typeText").innerHTML = pokemonList.pokemon[pokemonList.index].type;
     document.getElementById("heightText").innerHTML = pokemonList.pokemon[pokemonList.index].height;
@@ -55,5 +60,13 @@ function incrementIndex() {
         pokemonList.index++;
     } else {
         pokemonList.index = 0;
+    }
+}
+
+function decrementIndex() {
+    if (pokemonList.index > 0) {
+        pokemonList.index--;
+    } else {
+        pokemonList.index = pokemonList.pokemon.length - 1;
     }
 }

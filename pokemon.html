@@ -4,12 +4,13 @@
         <link rel="stylesheet" type="text/css" href="styles/home.css">
     </head>
     <body onload="displayPokemon()">
-        <h1>Pika pika!</h1><br>
-        <p><button id="viewRosterButton" onclick="setVisibility()">View Roster</button></p>
+        <h1 id="header">Pika pika!</h1><br>
+        <div><button id="viewRosterButton" onclick="setVisibility()">View Roster</button><br><br></div>
         
-
         <div id="creatureForm" style="display:none">
-            <p><button id="nextPokemonButton" onclick="displayPokemon()">Click for Next</button><br></p>
+            <div>
+                <button id="previousPokemonButton" onclick="displayPokemon('down')"><</button>
+                <button id="nextPokemonButton" onclick="displayPokemon('up')">></button><br><br></div>
             <div id="nameDiv">
                 <label id="nameLabel">Name: </label> 
                 <label id="nameText"></label>
