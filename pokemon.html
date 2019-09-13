@@ -4,22 +4,29 @@
         <link rel="stylesheet" type="text/css" href="styles/home.css">
     </head>
     <body>
-        <h2>Pika pika!</h2><br><br>
-        <button id="viewRosterButton" onclick="setVisibility()">View Roster</button><br><br>
-        <button id="nextPokemonButton" onclick="displayPokemon()" style="display:none">Click for Next</button><br><br>
+        <h1>Pika pika!</h1><br>
+        <p><button id="viewRosterButton" onclick="setVisibility()">View Roster</button></p>
+        
 
-        <p id="nameLabel" style="display:none">Name: 
-            <p id="nameText" style="display:none"></p>
-        </p> 
-        <p id="typeLabel" style="display:none">Type: 
-            <p id="typeText" style="display:none"></p>
-        </p>        
-        <p id="heightLabel" style="display:none">Height: 
-            <p id="heightText" style="display:none"></p>
-        </p>   
-        <p id="weightLabel" style="display:none">Weight: 
-            <p id="weightText" style="display:none"></p>
-        </p>
+        <div id="creatureForm" style="display:none">
+            <p><button id="nextPokemonButton" onclick="displayPokemon()">Click for Next</button><br></p>
+            <div id="nameDiv">
+                <label id="nameLabel">Name: </label> 
+                <label id="nameText"></label>
+            </div>
+            <div id="typeDiv">
+                <label id="typeLabel">Type: </label> 
+                <label id="typeText"></label>
+            </div>
+            <div id="heightDiv">
+                <label id="heightLabel">Height:  </label>
+                <label id="heightText"></label>                  
+            </div>      
+            <div id="weightDiv">
+                <label id="weightLabel">Weight: </label>
+                <label id="weightText"></label>                    
+            </div>
+        </div>
 
         <br>
         <a href="home.html">Back to Home</a>

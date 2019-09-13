@@ -33,7 +33,7 @@ function displayPokemon() {
 }
 
 function setVisibility() {
-    if (document.getElementById("nextPokemonButton").style.display == "none") {
+    if (document.getElementById("creatureForm").style.display == "none") {
         showRoster();
     } else {
         hideRoster();
@@ -41,15 +41,18 @@ function setVisibility() {
 }
 
 function showRoster() {
-    document.getElementById("nameLabel").style.display = "inline";
-    document.getElementById("nameText").style.display = "inline";
-    document.getElementById("typeLabel").style.display = "inline";
-    document.getElementById("typeText").style.display = "inline";
-    document.getElementById("heightLabel").style.display = "inline";
-    document.getElementById("heightText").style.display = "inline";
-    document.getElementById("weightLabel").style.display = "inline";
-    document.getElementById("weightText").style.display = "inline";
-    document.getElementById("nextPokemonButton").style.display = "inline";
+
+    document.getElementById("creatureForm").style.display = "inline";
+
+    // document.getElementById("nameLabel").style.display = "inline";
+    // document.getElementById("nameText").style.display = "inline";
+    // document.getElementById("typeLabel").style.display = "inline";
+    // document.getElementById("typeText").style.display = "inline";
+    // document.getElementById("heightLabel").style.display = "inline";
+    // document.getElementById("heightText").style.display = "inline";
+    // document.getElementById("weightLabel").style.display = "inline";
+    // document.getElementById("weightText").style.display = "inline";
+    // document.getElementById("nextPokemonButton").style.display = "inline";
 
     document.getElementById("viewRosterButton").innerHTML = "Hide Roster";
 }
