@@ -3,7 +3,7 @@
         <title>Pokemon Page</title>
         <link rel="stylesheet" type="text/css" href="styles/home.css">
     </head>
-    <body onload="displayPokemon()">
+    <body onload="displayPokemon(); testResult()">
         <h1 id="header">Pika pika!</h1><br>
         <div><button id="viewRosterButton" onclick="setVisibility()">View Roster</button><br><br></div>
         
@@ -28,9 +28,11 @@
                 <label id="weightText"></label>                    
             </div>
         </div>
+        <h2 id="test"></h2>
 
         <br>
         <a href="home.html">Back to Home</a>
     </body>
+    <script src="scripts/headerscript.js"></script>
     <script src="scripts/pokemon.js"></script>
 </html>

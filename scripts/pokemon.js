@@ -70,3 +70,7 @@ function decrementIndex() {
         pokemonList.index = pokemonList.pokemon.length - 1;
     }
 }
+
+function testResult(){
+    document.getElementById("test").innerHTML = prompt("Enter your name!");
+}
